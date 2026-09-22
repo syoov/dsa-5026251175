@@ -28,4 +28,4 @@ public class Colourprint extends PrintJob {
     public String label() {
         return "Colour";
     }
-}
+} 

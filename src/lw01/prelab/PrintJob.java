@@ -1,12 +1,13 @@
 package lw01.prelab;
 
-
-
-public abstract class PrintJob implements Chargeable {
+public abstract class PrintJob implements Chargeable { //abstarct can implement many interface
     private String id;
     private int pages;
 
     protected PrintJob (String id, int pages){
+        if (pages <= 0){
+            throw new IllegalArgumentException("pages must be greater than 0");
+        }
         this.id = id;
         this.pages = pages;
     }
@@ -37,3 +38,4 @@ public abstract class PrintJob implements Chargeable {
         return id + "|" + label() + "|" + calculateCharge();
     }
 }
+ 

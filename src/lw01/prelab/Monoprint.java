@@ -2,15 +2,13 @@ package lw01.prelab;
 
 public class Monoprint extends PrintJob{
 
-    private static final int hargaPerPage = 500;
-
     public Monoprint (String id, int pages){
         super(id, pages);
     }
 
     @Override 
     public int calculateCharge(){
-        return getPages() * hargaPerPage;
+        return getPages() * 500;
     }
 
     @Override 
@@ -18,3 +16,4 @@ public class Monoprint extends PrintJob{
         return "Mono";
     }
 }
+ 
