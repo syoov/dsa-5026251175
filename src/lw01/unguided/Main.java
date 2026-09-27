@@ -12,7 +12,7 @@ public class Main {
         String type = sc.next();
         String id = sc.next();
         int days = sc.nextInt();
-        
+        int units = sc.nextInt();
 
         if (type.equals("CAR")){
             services[i] = new CarWash(id, days);
