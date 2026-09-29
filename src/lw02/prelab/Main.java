@@ -19,7 +19,7 @@ public class Main {
         transactions.add(transaction);
        }
 
-       process.addAll(transactions);
+       process.addAll(transactions); //aduh lupa ini buat apa ya
        while(!process.isEmpty()){ //ga kosong/ masih ada
         String[] transaction = process.poll();
         String name = transaction[0];
