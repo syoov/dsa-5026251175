@@ -107,22 +107,22 @@ public class Main {
         System.out.println();
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException{
         Scanner sc = new Scanner(Main.class.getResourceAsStream("campus.txt"));
+        size = sc.nextInt(); //jmlh node 
+        names = new String[size]; //nama tempat
 
-        size = sc.nextInt();
-        names = new String[size];
-        for (int i = 0; i < size; i++) {
+        for (int i=0; i<size; i++){
             names[i] = sc.next();
         }
-        graph = new int[size][size];
 
-        int edges = sc.nextInt();
-        for (int i = 0; i < edges; i++) {
-            int v1 = sc.nextInt();
-            int v2 = sc.nextInt();
+        graph = new int[size][size];
+        int edges = sc.nextInt(); //jumlah edge
+        for (int i=0; i<edges; i++){
+            int from = sc.nextInt(); 
+            int to = sc.nextInt();
             int minutes = sc.nextInt();
-            addEdge(v1, v2, minutes);
+            addEdge(from, to, minutes);
         }
         int start = sc.nextInt();
         int dest = sc.nextInt();
