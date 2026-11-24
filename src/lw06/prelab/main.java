@@ -57,7 +57,6 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(main.class.getResourceAsStream("treenumbers.txt"));
 
-        // Write your main code here
         String firstLn = sc.nextLine();
         String[] nums = firstLn.split(" ");
         
